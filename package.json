@@ -1,0 +1,48 @@
+{
+  "name": "thevalleyofvision",
+  "version": "1.0.0",
+  "description": "Jesus Christ",
+  "main": "server.js",
+  "scripts": {
+    "server": "node server.js",
+    "client": "node scripts/start-client.js",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "build": "node scripts/build.js",
+    "seed": "node scripts/seedDB.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jasonnavarro86/thevalleyofvision.git"
+  },
+  "keywords": [
+    "faith",
+    "christ",
+    "God",
+    "Jesus",
+    "grace"
+  ],
+  "author": "Jason Pasquanel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jasonnavarro86/thevalleyofvision/issues"
+  },
+  "homepage": "https://github.com/Jasonnavarro86/thevalleyofvision#readme",
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
+  },
+  "proxy": "http://localhost:3001",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.4",
+    "jquery": "^3.3.1",
+    "mysql": "^2.16.0",
+    "path": "^0.12.7",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "2.1.1"
+  }
+}
