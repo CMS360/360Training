@@ -1,11 +1,15 @@
 {
   "name": "360training",
   "version": "1.0.0",
-  "description": "Created a basic MVC layout for React, Node, and MySQL for future projects.",
+  "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "server": "node server.js",
+    "client": "node scripts/start-client.js",
+    "start": " concurrently \"nodemon server.js\" \"npm run client\"",
+    "build": "node scripts/build.js",
+    "seed": "node scripts/seedDB.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -21,7 +25,6 @@
     "concurrently": "^3.5.0",
     "nodemon": "^1.11.0"
   },
-  "proxy": "http://localhost:3001",
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.2",

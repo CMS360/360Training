@@ -1,26 +1,42 @@
 import React from 'react'
-// import API from '../utils/API'
-// import { Nav } from '../components/Nav'
+import API from '../utils/API'
+import { Nav } from '../components/Nav'
 
-export class Home extends React.Component{
+export class Home extends React.Component {
 
-  constructor(props){
+  constructor(props) {
     super(props)
 
-      this.state = {
-      }
+    this.state = {
+    }
   }
-  
- 
-render(){
 
-    return(
+  testRoute = id =>{
+    let sentQuery = 'SELECT * FROM dbo.Companies WHERE id = 2030;'
+      API.sales360Query("users", {query: sentQuery})
+      .then(res => console.log(res))
+    }
+    testRoute2 = id =>{
+      let sentQuery2 = 'SELECT * FROM dbo.CMS_Articles WHERE id = 31;'
+        API.classic360Query("users", {query: sentQuery2})
+        .then(res => console.log(res))
+      }
+  render() {
+
+    return (
       <div id='mainDiv'>
-       <h1>Hello World</h1>
-       <br/>
-       <a href="/TestPage">Test Page found at '/TestPage'</a>
-      </div>
-          )
+        <Nav />
+        <div className="mainSection">
+          <h1>Hello World</h1>
+          <br />
+          <button onClick={()=>this.testRoute(5)}>Sales 360 Test</button>
+          <br/>
+          <br/>
+          <button onClick={()=>this.testRoute2(5)}>Classic 360 Test</button>
+        </div>
 
- }
+      </div>
+    )
+
+  }
 }

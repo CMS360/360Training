@@ -2,20 +2,10 @@ import axios from 'axios'
 
 export default {
 
-    getAll: function(path){
-        return axios.get('/api/' + path)
-    },
-    getOne: function(path, id) {
-        return axios.get('/api/' + path +'/'+ id);
-    },
-    
-    deleteOne: function(path, id) {
-        return axios.delete('/api/' + path +'/'+ id);
-    },
-    saveOne: function(path, Data) {
+    sales360Query: function(path, Data) {
         return axios.post('/api/' + path, Data);
     },
-    updateOne: function(path,id, Data){
-        return axios.put('/api/' + path +'/'+ id, Data);
+    classic360Query: function(path, Data) {
+        return axios.put('/api/' + path, Data);
     }
 }
