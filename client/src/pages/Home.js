@@ -17,7 +17,7 @@ export class Home extends React.Component {
       .then(res => console.log(res))
     }
     testRoute2 = id =>{
-      let sentQuery2 = 'SELECT * FROM dbo.CMS_Articles WHERE id = 31;'
+      let sentQuery2 = 'SELECT * FROM dbo.CMS_Articles WHERE ArticleID = 31;'
         API.classic360Query("users", {query: sentQuery2})
         .then(res => console.log(res))
       }

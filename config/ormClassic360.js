@@ -1,6 +1,7 @@
 const sql = require('mssql')
 // {user-name}:{password}@{db-server-port}/{db-name}
-const DbConnectionString ='mssql://CMS\CMSAdmin:work1234@192.168.2.105:1433/CMS2007';
+//const DbConnectionString ='mssql://CMS\CMSAdmin:t3chg33k5@192.168.2.105:1433/CMS2007';
+const DbConnectionString ='mssql://cmsfollowups2:t3chg33k5@192.168.2.105:1433/CMS2007';
 sql.on('error', err => {
   console.dir(err);
   sql.close();
