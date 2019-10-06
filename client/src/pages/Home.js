@@ -14,12 +14,12 @@ export class Home extends React.Component {
   testRoute = id =>{
     let sentQuery = 'SELECT * FROM dbo.Companies WHERE id = 2030;'
       API.sales360Query("users", {query: sentQuery})
-      .then(res => console.log(res))
+      .then(res => {console.log(res); return})
     }
     testRoute2 = id =>{
       let sentQuery2 = 'SELECT * FROM dbo.CMS_Articles WHERE ArticleID = 31;'
         API.classic360Query("users", {query: sentQuery2})
-        .then(res => console.log(res))
+        .then(res => {console.log(res); return})
       }
   render() {
 
